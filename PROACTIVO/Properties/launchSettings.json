@@ -1,21 +1,13 @@
 {
-  "iisSettings": {
-    "windowsAuthentication": false,
-    "anonymousAuthentication": true,
-    "iisExpress": {
-      "applicationUrl": "http://localhost:31914",
-      "sslPort": 44347
-    }
-  },
   "profiles": {
     "PROACTIVO": {
       "commandName": "Project",
-      "dotnetRunMessages": true,
       "launchBrowser": true,
-      "applicationUrl": "https://localhost:7143;http://localhost:5143",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
-      }
+      },
+      "dotnetRunMessages": true,
+      "applicationUrl": "https://localhost:7143;http://localhost:5143"
     },
     "IIS Express": {
       "commandName": "IISExpress",
@@ -23,6 +15,25 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
+    },
+    "WATCH": {
+      "commandName": "Executable",
+      "executablePath": "dotnet.exe",
+      "commandLineArgs": "watch run",
+      "workingDirectory": "$(ProjectDir)",
+      "environmentVariables": {
+        " ASPNETCORE_HOSTINGSTARTUPASSEMBLIES": "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation",
+        "inspectUri": "{wsProtocol}:/{url.hostname}:{url.port}/_framework/debug/ws-proxy?browser={browserInspectUri}",
+        " ASPNETCORE_EVIRONMENT": "Development"
+      }
+    }
+  },
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:31914",
+      "sslPort": 44347
     }
   }
 }

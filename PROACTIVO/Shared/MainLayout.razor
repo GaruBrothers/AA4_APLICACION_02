@@ -1,7 +1,9 @@
 ﻿@inherits LayoutComponentBase
+@using Radzen
+@using Radzen.Blazor
 
 <PageTitle>PROACTIVO</PageTitle>
-
+@*
 <div class="page">
     <div class="sidebar">
         <NavMenu />
@@ -17,3 +19,45 @@
         </article>
     </main>
 </div>
+*@
+
+
+
+    <RadzenHeader>
+        <div class="d-flex align-items-center">
+            <RadzenSidebarToggle Click="@(() => sidebar1Expanded = !sidebar1Expanded)" />
+            <RadzenLabel Text="Menu" />
+        </div>
+    </RadzenHeader>
+    <RadzenSidebar @bind-Expanded="@sidebar1Expanded">
+        <RadzenPanelMenu Style="">
+        <div style="display: flex;justify-content: center; margin-top:50px;">
+                <img src="img/LogoEmpresa.png" style="width:220px;"/>
+            </div>
+            <RadzenPanelMenuItem Text="Inicio" Icon="home" Path="/" style="margin-top:100px;"/>
+            <RadzenPanelMenuItem Text="Personas" Icon="account_box" Path="Personas"/>
+        </RadzenPanelMenu>
+        <div class="p-2">
+            
+        </div>
+    </RadzenSidebar>
+    <RadzenBody>
+        <div class="p-2">
+            @Body
+        </div>
+    </RadzenBody>
+    <RadzenFooter>
+        Footer
+    </RadzenFooter>
+
+
+
+
+@code {
+    bool sidebar1Expanded = true;
+    bool sidebar2Expanded = true;
+    bool sidebar3Expanded = true;
+    bool sidebar4Expanded = true;
+    bool sidebar5Expanded = true;
+    bool sidebar6Expanded = true;
+}
